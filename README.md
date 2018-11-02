@@ -1,5 +1,4 @@
-LET'S GET EMOTIONAL
-WE ALREADY GOT PHYSICAL
+LET'S GET EMOTIONAL - we already got physical
 
 # Abstract
 
