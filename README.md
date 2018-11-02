@@ -21,9 +21,7 @@ In our data story we explore conflicts all over the world and the public attenti
 
 - In line with: are we emotionally biased? If we select some countries important in the global political spectrum (e.g. Germany, Russia, Brazil and US) and we look at the timeline (e.g. 1990 until today) of the average tone of each country in articles mentionning: "country" "President (at that time period)" "Name" (e.g. "Germany " "chancellor" "Angela Merkel" if we are in the time period 2005-2018 and "Germany" "chancellor" "Gerhard Schröder" 1998-2005)
 
-Do we see generally differences between the countries (e.g. more negative for Russia than Germany)
-Do we see pattern when the president changes?
-Do we see a trend towards more negative emotions over the years?
+- Do we see generally differences between the countries (e.g. more negative for Russia than Germany) Do we see pattern when the president changes? Do we see a trend towards more negative emotions over the years?
 
 
 ## Dataset
@@ -32,5 +30,5 @@ Do we see a trend towards more negative emotions over the years?
 
 ## Questions for TAs
 
-1. How old is the GDELT dataset in the cluster? How regularly is it updated?
-2. Do we have access to the 2300 emotions provided for each event or just the overall sentiment? GDELT mentions that: "users interested in emotional measures use the Mentions and Global Knowledge Graph tables to merge the complete set of 2,300 emotions and themes from the GKG GCAM system into their analysis of event records"
+- How old is the GDELT dataset in the cluster? How regularly is it updated?
+- Do we have access to the 2300 emotions provided for each event or just the overall sentiment? GDELT mentions that: "users interested in emotional measures use the Mentions and Global Knowledge Graph tables to merge the complete set of 2,300 emotions and themes from the GKG GCAM system into their analysis of event records"
