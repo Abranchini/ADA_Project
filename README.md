@@ -23,6 +23,9 @@ Can we observe patterns of emotions given a country, a religion, an ethnical gro
 4. Research question correlating the average tone with a specific event/ ethnical group/mfamous person/ dictator 
 TO BE DEFINED
 
+5. Is there some emotional saturation?
+Does having a lot of few conflicts affect how people feel about it? If there are many conflicts in one place people get used to it and do not react to it as strongly as in places it occurs less often.
+
 Marie Idea: 
 
 - In line with: are we emotionally biased? If we select some countries important in the global political spectrum (e.g. Germany, Russia, Brazil and US) and we look at the timeline (e.g. 1990 until today) of the average tone of each country in articles mentionning: "country" "President (at that time period)" "Name" (e.g. "Germany " "chancellor" "Angela Merkel" if we are in the time period 2005-2018 and "Germany" "chancellor" "Gerhard Schröder" 1998-2005)
