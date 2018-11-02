@@ -1,4 +1,4 @@
-# LET'S GET EMOTIONAL - we already got physical
+# LET'S GET EMOTIONAL (we already got physical)
 
 ## Abstract
 
@@ -7,13 +7,13 @@ In our data story we explore conflicts all over the world and the public attenti
 
 ## Research question
 
-1. **Are we emotionally biased?** Do the number of conflicts or their distance from our home define our emotions? Is there an underlying trend of a more positive or negative news perception over time?
+- **Are we emotionally biased?** Do the number of conflicts or their distance from our home define our emotions? Is there an underlying trend of a more positive or negative news perception over time?
 
-2. **Are some countries ignored in the news?**  Is the number of conflicts taking place in a country in relation with the number of mentions in the media depending on where the conflict has happened? 
+- **Are some countries ignored in the news?**  Is the number of conflicts taking place in a country in relation with the number of mentions in the media depending on where the conflict has happened? 
 
-3. **Are we emotionally predictable?** Can we observe patterns of emotions with respect to a country, religion or an ethnical group? Can we derive a model predicting emotions in case of a new conflict based on its specific features?
+- **Are we emotionally predictable?** Can we observe patterns of emotions with respect to a country, religion or an ethnical group? Can we derive a model predicting emotions in case of a new conflict based on its specific features?
 
-4. **Do we have a saturation limit?** Does increasing number of conflicts make people feel worse and worse or is there some limit? Do we get used to a conflict with time and become less sentimental? 
+- **Do we have a saturation limit?** Does increasing number of conflicts make people feel worse and worse or is there some limit? Do we get used to a conflict with time and become less sentimental? 
 
 
 **---TO BE DEFINED (as a 5th, 6th question) ---**
