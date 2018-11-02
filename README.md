@@ -1,3 +1,4 @@
+# Let's get emotional, we already got physical
 
 # Abstract
 
@@ -25,7 +26,11 @@ Do we see pattern when the president changes?
 Do we see a trend towards more negative emotions over the years?
 
 
-# Questions to the TA
+# Dataset
+
+# A list of internal milestones (until milestone 2)
+
+# Questions for TAs
 
 1. How old is the GDELT dataset in the cluster? How regularly is it updated?
 2. Do we have access to the 2300 emotions provided for each event or just the overall sentiment? GDELT mentions that: "users interested in emotional measures use the Mentions and Global Knowledge Graph tables to merge the complete set of 2,300 emotions and themes from the GKG GCAM system into their analysis of event records"
