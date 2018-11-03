@@ -32,18 +32,19 @@ We will make an analysis on a country , religion and ethnical group basis as to 
 Until the 10th of November (Data Acquisition , Data Preparation and Cleaning)
 - Get to know how to work in the cluster.
 - Exploratory analysis of the GDELT dataset.
-- Divide the dataset taking into account some specific countries/ethnic and religious groups desired for our research.
+- Create subsets of the dataset taking into account some specific countries/ethnic and religious groups desired for our research.
 - Clean the dataset regarding possible events that are not interesting.
 - Sketch our own goldstein scale for future comparison.
 
 Until the 17th of November (Data Preparation and Cleaning, Data interpretation)
 - Search the urls from the news of chosen events to be able to attribute them to countries.
-- Having the news and the countries/ethnic and religious groups defined begin our emotional analysis. Observe how they react.
+- Having the news and the countries/ethnic and religious groups defined, begin our emotional analysis. Observe how they react.
 - Select specific timeframes where we can see a possible emotion saturation
+- Relate importance of conflict with attention it got by other countries.
 
 Until the 25th of November (Data interpretation) 
 - From the patterns discovered before, build a possible predictive model that would enables to antecipate possible emotional reactions to a new conflict.
-- Enrich possible big event conclusions with web data.
+- Enrich our potential conclusions regarding reactions to big events with web data.
 
 
 ## Questions for TAs
