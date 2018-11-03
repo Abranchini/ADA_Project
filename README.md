@@ -25,27 +25,28 @@ In our data story we explore conflicts all over the world and the public attenti
 
 
 ## Dataset
-As mentioned in the abstract the dataset that we will use to answer our questions is the GDELT dataset. It has five main datafields ( EventID and Date , Actor, Envent ,Event Geography and Data Management Fields), with each one having several attributes. We plan to focus on the location of the events or the actors, the goldstein scale (or a scale proposed by us) and the AvgTone (plus some realtime measurement of 2,300 Emotions, a feature available in GDELT 2.0) to build the answer to our questions. The sourceurl attribute will also help us to determine reactions of countries to a certain event. For a further descriptive analysis we also consulted the kaggle competition where this dataset was used.
-We will make an analysis on a country , religion and ethnical group basis as to find possible results in terms of emotions regarding the events, narrowing our search in the dataset.
+As mentioned in the abstract the dataset that we will use to answer our questions is the GDELT dataset. It has five main datafields ( EventID and Date , Actor, Envent ,Event Geography and Data Management Fields), with each one having several attributes. We plan to focus on the location of the events or the actors, the goldstein scale (or a scale proposed by us) and the AvgTone (plus some realtime measurement of 2,300 Emotions) to build the answer to our questions. The sourceurl attribute will also help us to determine reactions of countries to a certain event.   
+We will make an analysis on a country , religion and ethnical group basis as to find possible results in terms of emotions regarding the events, narrowing our search in the dataset. Since GDELT 2.0 is up to date, some of the main conflicts should be well described in the web, something we can use to enrich our analysis regarding the reactions of some countries to that event.
 
 ## A list of internal milestones (until milestone 2)
 Until the 10th of November (Data Acquisition , Data Preparation and Cleaning)
-- Download both the cluster GDELT project folder and the GDELT 2.0 from the original website.
-- Exploratory dataset analysis
-- Try to divide the dataset GDELT from the cluster taking into account some specific countries desired for our research
-- Clean the dataset regarding possible events that are not interesting
+- Get to know how to work in the cluster.
+- Exploratory analysis of the GDELT dataset.
+- Divide the dataset taking into account some specific countries/ethnic and religious groups desired for our research.
+- Clean the dataset regarding possible events that are not interesting.
+- Sketch our own goldstein scale for future comparison.
 
 Until the 17th of November (Data Preparation and Cleaning, Data interpretation)
-- Search the urls from the news to be able to attribute them to countries
-- Get the emotions from the GDELT 2.0
-- For each selected country explore the urls for the different events trying to connect countries in terms of distance and impact
+- Search the urls from the news of chosen events to be able to attribute them to countries.
+- Having the news and the countries/ethnic and religious groups defined begin our emotional analysis. Observe how they react.
+- Select specific timeframes where we can see a possible emotion saturation
 
-Until the 22nd of November
-- 
+Until the 25th of November (Data interpretation) 
+- From the patterns discovered before, build a possible predictive model that would enables to antecipate possible emotional reactions to a new conflict.
+- Enrich possible big event conclusions with web data.
 
 
 ## Questions for TAs
 
 - How old is the GDELT dataset in the cluster? How regularly is it updated?
 - Do we have access to the 2300 emotions provided for each event or just the overall sentiment? GDELT mentions that: "users interested in emotional measures use the Mentions and Global Knowledge Graph tables to merge the complete set of 2,300 emotions and themes from the GKG GCAM system into their analysis of event records"
-- Can we download GDELT 2.0 to have access to the new emotions?
