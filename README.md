@@ -15,13 +15,7 @@ In our data story we explore conflicts all over the world and the public attenti
 
 - **Do we have a saturation limit?** Does increasing number of conflicts make people feel worse and worse or is there some limit? Do we get used to a conflict with time and become less sentimental? 
 
-
-**---TO BE DEFINED (as a 5th, 6th question) ---**
-- Research question correlating the average tone with a specific event/ ethnical group/mfamous person/ dictator 
-
-- In line with: are we emotionally biased? If we select some countries important in the global political spectrum (e.g. Germany, Russia, Brazil and US) and we look at the timeline (e.g. 1990 until today) of the average tone of each country in articles mentionning: "country" "President (at that time period)" "Name" (e.g. "Germany " "chancellor" "Angela Merkel" if we are in the time period 2005-2018 and "Germany" "chancellor" "Gerhard Schröder" 1998-2005)
-
-- Do we see generally differences between the countries (e.g. more negative for Russia than Germany) Do we see pattern when the president changes? Do we see a trend towards more negative emotions over the years?
+- **Who is more emotional?** Do we see sensitivity differences between some countries? Do we see a trend towards more negative emotions over the years?
 
 
 ## Dataset
