@@ -37,7 +37,7 @@ Until the 17th of November (Data Preparation and Cleaning, Data interpretation)
 - Relate importance of conflict with attention it got by other countries.
 
 Until the 25th of November (Data interpretation) 
-- From the patterns discovered before, build a possible predictive model that would enables to antecipate possible emotional reactions to a new conflict.
+- From the patterns discovered before, build a possible predictive model that would enable to antecipate possible emotional reactions to a new conflict.
 - Enrich our potential conclusions regarding reactions to big events with web data.
 
 
