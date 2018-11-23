@@ -46,3 +46,45 @@ Until the 25th of November (Data interpretation)
 - How old is the GDELT dataset in the cluster? How regularly is it updated?
 - Do we have access to the 2300 emotions provided for each event or just the overall sentiment? GDELT mentions that: "users interested in emotional measures use the Mentions and Global Knowledge Graph tables to merge the complete set of 2,300 emotions and themes from the GKG GCAM system into their analysis of event records"
 
+---
+
+## Milestone 2: Data Collection and Description
+
+### Pursued strategy to answer the research questions:
+
+1. **Are we emotionally biased?** Do the number of conflicts or their distance from our home define our emotions? Is there an underlying trend of a more positive or negative news perception over time?
+
+  ### Fetching the data 
+
+  From the GDELT dataset we fetch the following information from the "Mentions" and "Events" sets:
+
+  - Time of the event (fetch the data in the available 2-year interval)
+  - Url of the article mentioning the source 
+  - Average Tone 
+  - Location of the event (latitudinal and longitudinal coordinates)
+  - Number of times the event is mentioned in the news (NumMentions, NumSources, NumArticles) 
+
+  ### Analysis
+  
+  1. Addressing the subquestion: Do the number of conflicts or their distance from our home define our emotions?
+
+  - Calculation of the distance between the source article and the event: 
+      1. Get the country from the url 
+      2. Get the geographic coordinates of the capital of the country
+      3. Calculate the geographic distance between the source article and the event
+      
+  - Evaluation of the dependency between the emotions and the distance: 
+      1. Plot the emotion metrics against the distance (curve with confidence interval)
+      2. Evaluate the statistical significance of the regression coefficient
+      
+  - Evaluation of the dependency between the emotions and the importance of the conflict:
+      1. Statistical evaluation of which of the 3 "importance of an event" metrics provided by GDELT (NumMentions, NumSources, NumArticles) best correlates with the emotion metrics
+      
+  2. Addressing the subquestion: Is there an underlying trend of a more positive or negative news perception over time?
+  
+  - Determine the evolution of the number of mentions and the emotions over the available time period in bins of 1 month
+  - Analyse whether there is a pattern in the change of these 2 variables
+  
+2. **Are some countries ignored in the news?**  Is the number of conflicts taking place in a country in relation with the number of mentions in the media depending on where the conflict has happened? 
+  
+
