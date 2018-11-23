@@ -86,5 +86,35 @@ Until the 25th of November (Data interpretation)
   - Analyse whether there is a pattern in the change of these 2 variables
   
 2. **Are some countries ignored in the news?**  Is the number of conflicts taking place in a country in relation with the number of mentions in the media depending on where the conflict has happened? 
+
+3. **Are we emotionally predictable?** Can we observe patterns of emotions with respect to a country, religion or an ethnical group? Can we derive a model predicting emotions in case of a new conflict based on its specific features?
+
+4. **Do we have a saturation limit?** Does increasing number of conflicts make people feel worse and worse or is there some limit? Do we get used to a conflict with time and become less sentimental?
+
+  ### Fetching the data 
+
+  From the GDELT dataset we fetch the following information from the "GKG":
+
+  - Url of the article mentioning the source 
+  - Average Tone 
+  - GCAM 
+
+  ### Analysis
   
+  1. Addressing the subquestion: Does increasing number of conflicts make people feel worse and worse or is there some limit?
+
+  - Calculation the increasing number of conflicts: 
+      1. Get the country from the url 
+      2. Parse through the gkg files (in the time interval we wish) and get the events referent to a country.
+      
+  - Possible limit of the emotions: 
+      1. Get the average tone and the GCAM feelings referent to the events
+      2. Evaluate the emotions that we have for each of this event, observing how the media shows the events and if there are some insensibility or not after a threshold number of events.
+  
+5. **Who is more emotional?** Do we see sensitivity differences between some countries? Do we see a trend towards more negative emotions over the years?
+
+
+## Questions for TAs
+In the GCAM column, the floating point average value (the ones that start with v) do not exist for all dictionaries in that event.
+There are a lot of c's, but not a corresponding number of v's. In the documentation this fact is not explained, wanted to know if they only computed the score for specific dictionaries
 
