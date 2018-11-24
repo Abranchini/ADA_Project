@@ -9,7 +9,7 @@ In our data story we explore conflicts all over the world and the public attenti
 
 - **Are we emotionally biased?** Do the number of conflicts or their distance from our home define our emotions? Is there an underlying trend of a more positive or negative news perception over time?
 
-**Update:** We do not evaluate pattern over time since the available dataset only covers a period of 2 years. 
+**Update:** We do not evaluate patterns over time since the available dataset only covers a period of 2 years. 
 
 - **Are some countries ignored in the news?**  Is the number of conflicts taking place in a country in relation with the number of mentions in the media depending on where the conflict has happened? 
 
