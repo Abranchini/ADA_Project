@@ -47,13 +47,12 @@ Until the 25th of November (Data interpretation)
 
 - Think about different visualizations to present the conducted data analysis in a clear and concise manner. 
 
+---
 
 ## Questions for TAs - Milestone 1
 
 - How old is the GDELT dataset in the cluster? How regularly is it updated?
 - Do we have access to the 2300 emotions provided for each event or just the overall sentiment? GDELT mentions that: "users interested in emotional measures use the Mentions and Global Knowledge Graph tables to merge the complete set of 2,300 emotions and themes from the GKG GCAM system into their analysis of event records"
-
----
 
 
 ## Questions for TAs - Milestone 2
