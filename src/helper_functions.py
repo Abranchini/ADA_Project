@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 def get_emotion_dictionary(data_dir, GCAM_txt):
 	""" Get dictionary for emotions
@@ -43,7 +44,7 @@ def get_emotion(row):
 	return dicts_word_count
 
 
-def get_prevalent_emotions(event, df, top_features):
+def get_prevalent_emotions(event, df, Emotions_dictionary, top_features):
 	""" Get the most frequent emotions for that even
 		Input:
 		    event, df, top_features
@@ -70,7 +71,7 @@ def get_prevalent_emotions(event, df, top_features):
 
 	return Numb_Emo_str
     
-def plot_commom_emotion(tuple_list):
+def plot_commom_emotion(tuple_list = None, dictionary = None, dictionary_flag = False):
 	""" Plot the most frequent emotions
 		Input:
 		    list
@@ -93,10 +94,10 @@ def plot_commom_emotion(tuple_list):
 	else:
 	    plt.figure(figsize=(20,10))
 	    plt.xticks(rotation=90)
-	    plt.bar(dictionary.values(),dictionary.keys())
+	    plt.bar(dictionary.keys(),dictionary.values())
 	    plt.show()
     
-def dict_top_feelings(df,start,end):
+def dict_top_feelings(df,Emotions_dictionary,start,end):
 	""" Get dict of the most frequent emotions
 		Input:
 		    dataframe
@@ -104,13 +105,13 @@ def dict_top_feelings(df,start,end):
 		    dictionary
 	"""	 
 
-    dict_t={}
+	dict_t={}
 
-    for i in df['GKGRECORDID'].iloc[start:end]:
-        emo = get_prevalent_emotions(i, df, 10 )
-        for feel in emo:
-            if feel[1] not in dict_t:
-                dict_t[feel[1]] = 1
-            else:
-                dict_t[feel[1]] += 1
-    return dict_t
+	for i in df['GKGRECORDID'].iloc[start:end]:
+	    emo = get_prevalent_emotions(i, df, Emotions_dictionary, 10 )
+	    for feel in emo:
+	        if feel[1] not in dict_t:
+	            dict_t[feel[1]] = 1
+	        else:
+	            dict_t[feel[1]] += 1
+	return dict_t
