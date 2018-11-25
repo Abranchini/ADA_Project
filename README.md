@@ -20,9 +20,11 @@ In our data story we explore conflicts all over the world and the public attenti
 
 - **Do we have a saturation limit?** Does increasing number of conflicts make people feel worse and worse or is there some limit? Do we get used to a conflict with time and become less sentimental? 
 
+**Update:** As before, we do not address time related questions, and thus we disregard the second subquestion.
+
 - **Who is more emotional?** Do we see sensitivity differences between some countries? Do we see a trend towards more negative emotions over the years?
 
-**Update:** We will focus also on actors and not countries because the emotions are referent to the news, so it makes more sense to associate certain types of speech to people rather than countries (although there can also be some interesting relationship here) 
+**Update:** We will also focus on actors and not only countries. Since the emotions are referent to the news, certain sensitivities are more directed towards people rather than towards countries. Again we neglect the time component.
 
 ## Dataset
 As mentioned in the abstract the dataset that we will use to answer our questions is the GDELT dataset. It has five main datafields ( EventID and Date , Actor, Envent ,Event Geography and Data Management Fields), with each one having several attributes. We plan to focus on the location of the events or the actors, the goldstein scale (or a scale proposed by us) and the AvgTone (plus some realtime measurement of 2,300 Emotions) to build the answer to our questions. The sourceurl attribute will also help us to determine reactions of countries to a certain event.   
