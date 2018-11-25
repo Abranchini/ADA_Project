@@ -54,7 +54,7 @@ Until the 25th of November (Data interpretation)
 ## A list of internal milestones (until milestone 3)
 
 - Think about different visualizations to present the conducted data analysis in a clear and concise manner.
-- Develop the model for question 3.
+- Develop the model for question 3 (that will take into account a lot of the results of the other questions).
 - Explore the different emotion metrics, average tone and emotion dictionaries and propose a propose a feasible combination of all of them. Also define a score referent to the dictionaries in the GCAM column (similar to the vscore GCAM already has).
 - We have run and tested pieces of our code on the cluster already on a couple of files. Next step is to run our whole pipeline on the whole dataset in the cluster.
 - Create a template for our data story and fill the individual sections.
