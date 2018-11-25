@@ -54,7 +54,7 @@ Until the 25th of November (Data interpretation)
 ## A list of internal milestones (until milestone 3)
 
 - Think about different visualizations to present the conducted data analysis in a clear and concise manner.
-- Run our computations on the whole dataset in the clusted.
+- We have run and tested pieces of our code on the cluster already on a couple of files. Next step is to run our whole pipeline on the whole dataset in the cluster.
 - Create a template for our data story and fill the individual sections.
 - Answer questions we have asked ourselves in the first milestone with appropriate data reasoning.
 
