@@ -32,8 +32,8 @@ def get_emotion(row):
 		    row
 		Output:
 		    tuple list with dictionaryand number of words
-	"""	   
-    dicts_word_count=[]
+	"""	
+    dicts_word_count = []
     
     for cell in row.columns[1:]:
         str_cell = row[cell].values[0]
