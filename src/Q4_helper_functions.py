@@ -23,3 +23,70 @@ def get_emotion_dictionary(data_dir, GCAM_txt):
 	Emotions_dictionary = df_GCAM_CODEBOOK[['Variable','DimensionHumanName']]
 
 	return Emotions_dictionary
+
+
+def get_emotion(row):
+	""" Get row referent to the event to see
+	the emotions.
+		Input:
+		    row
+		Output:
+		    tuple list with dictionaryand number of words
+	"""	
+    
+    dicts_word_count = []
+    
+    for cell in row.columns[1:]:
+        str_cell = row[cell].values[0]
+        
+        dicts_word_count.append((float(str_cell.split(':')[1]),str_cell.split(':')[0]))
+   
+    return dicts_word_count
+
+
+def get_prevalent_emotions(event, df, top_features):
+	""" Get the most frequent emotions for that even
+		Input:
+		    event, df, top_features
+		Output:
+		    Number of words for some emotion (not dictionary)
+	"""	    
+    event_emot = df.loc[df['GKGRECORDID'] == event]
+    event_emot = event_emot.dropna(axis=1,how='all')
+    
+    d_wcnt = get_emotion(event_emot)
+    
+    d_wcnt.sort(reverse=True)
+    
+    word_count = d_wcnt[0][0]
+    
+    Numb_Emo_str = []
+    
+    for freq_emo in d_wcnt[1:top_features]:
+        
+        Emotion = Emotions_dictionary.loc[Emotions_dictionary['Variable'] == str(freq_emo[1])]
+        legend  = Emotion['DimensionHumanName'].values[0]
+        
+        Numb_Emo_str.append((freq_emo[0],legend))
+    
+    return Numb_Emo_str
+    
+def plot_commom_emotion(tuple_list):
+	""" Plot the most frequent emotions
+		Input:
+		    list
+		Output:
+		    plot
+	"""	        
+    x=[]
+    y=[]
+    
+    for t in tuple_list:
+        x.append(t[0])
+        y.append(t[1])
+    
+    plt.figure(figsize=(20,10))
+    plt.xticks(rotation=90)
+    plt.bar(y,x)
+    plt.show()
+    
