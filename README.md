@@ -47,8 +47,9 @@ Until the 25th of November (Data interpretation)
 ## A list of internal milestones (until milestone 3)
 
 - Think about different visualizations to present the conducted data analysis in a clear and concise manner.
-- Run our computations on the whole dataset.
-- Create a template for our data story a fill individual sections.
+- Run our computations on the whole dataset in the clusted.
+- Create a template for our data story and fill the individual sections.
+- Answer questions we have asked ourselves in the first milestone with appropriate data reasoning.
 
 
 ## Questions for TAs - Milestone 1
