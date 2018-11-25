@@ -5,6 +5,9 @@
 In our data story we explore conflicts all over the world and the public attention they receive. We harness the huge [GDELT 2.0](https://www.gdeltproject.org/data.html#documentation) dataset consisting of events collected every day from thousands media channels of the world's news. The GDELT contains various features about the particular events including the sentiment analysis of the news sources. We focus mostly on the emotions conflicts tend to arouse with respect to their distinct features. The questions we ask are whether some regions are payed more attention than others, if news articles get more emotionally involved in conflicts occuring closer to our homes, or whether we tend to depict particular regions, nations or ethnicities by some steady emotional patterns. Throughout our research we hope to lift the shroud of how equally media report on the worlds conflicts and whether some sentiment bias exists. As the public is nowadays heavily influenced by (social) media and emotions affect us often heavier than the pure facts, we believe it is an important task to investigate how our news sources work with such a power they have upon us. 
 
 
+---
+
+
 ## Research question
 
 - **Are we emotionally biased?** Do the number of conflicts or their distance from our home define our emotions? Is there an underlying trend of a more positive or negative news perception over time?
@@ -24,6 +27,10 @@ In our data story we explore conflicts all over the world and the public attenti
 ## Dataset
 As mentioned in the abstract the dataset that we will use to answer our questions is the GDELT dataset. It has five main datafields ( EventID and Date , Actor, Envent ,Event Geography and Data Management Fields), with each one having several attributes. We plan to focus on the location of the events or the actors, the goldstein scale (or a scale proposed by us) and the AvgTone (plus some realtime measurement of 2,300 Emotions) to build the answer to our questions. The sourceurl attribute will also help us to determine reactions of countries to a certain event.   
 We will make an analysis on a country , religion and ethnical group basis as to find possible results in terms of emotions regarding the events, narrowing our search in the dataset. Since GDELT 2.0 is up to date, some of the main conflicts should be well described in the web, something we can use to enrich our analysis regarding the reactions of some countries to that event. Moreover, our second question (Are some countries ignored in the news?), will benefit from the new "High Resolution View of the Non-Western World" capability added in GDELT 2.0, that expectantly will provide us with more accurate and unbiased data regarding more remote countries.
+
+
+---
+
 
 ## A list of internal milestones (until milestone 2)
 Until the 10th of November (Data Acquisition , Data Preparation and Cleaning)
@@ -52,16 +59,16 @@ Until the 25th of November (Data interpretation)
 - Answer questions we have asked ourselves in the first milestone with appropriate data reasoning.
 
 
+---
+
+
 ## Questions for TAs - Milestone 1
 
 - How old is the GDELT dataset in the cluster? How regularly is it updated?
 - Do we have access to the 2300 emotions provided for each event or just the overall sentiment? GDELT mentions that: "users interested in emotional measures use the Mentions and Global Knowledge Graph tables to merge the complete set of 2,300 emotions and themes from the GKG GCAM system into their analysis of event records"
-
----
 
 
 ## Questions for TAs - Milestone 2
 
 - In the GCAM column, the floating point average value (the ones that start with v) do not exist for all dictionaries in that event.
 There are a lot of c's, but not a corresponding number of v's. In the documentation this fact is not explained, wanted to know if they only computed the score for specific dictionaries?
-
