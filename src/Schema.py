@@ -1,12 +1,5 @@
-import numpy as np
 import pyspark
-import os
-import scipy as sp
-from pyspark.sql import *
-from pyspark.sql.functions import to_timestamp
 from pyspark.sql.types import *
-
-spark = SparkSession.builder.getOrCreate()
 
 GKG_SCHEMA = StructType([
         StructField("GKGRECORDID",StringType(),True),
@@ -120,20 +113,3 @@ MENTIONS_SCHEMA = StructType([
     StructField("MentionDocTranslationInfo",StringType(),True),
     StructField("Extras",StringType(),True)
     ])
-
-
-    ## Change this in the cluster
-
-DATA_DIR = 'hdfs:///datasets/gdeltv2'
-
-events_df = spark.read.option("sep", "\t").csv(os.path.join(DATA_DIR, "*.export.CSV"),schema=EVENTS_SCHEMA)
-mentions_df = spark.read.option("sep", "\t").csv(os.path.join(DATA_DIR, "*.mentions.CSV"),schema=MENTIONS_SCHEMA)
-
-# Question 1 Select Data from Mentions Dataset
-mentions_q1_df = mentions_df.select("GLOBALEVENTID", "EventTimeDate", "MentionType", "MentionSourceName") \
-                .filter(mentions_df["MentionType"] == '1')
-# Question 1 Select Data from Events Dataset
-events_q1_df= events_df.select("GLOBALEVENTID", "ActionGeo_Lat", "ActionGeo_Long", "NumMentions","NumSources","NumArticles","AvgTone")
-# merge them
-event_mentions_df = events_q1_df.join(mentions_q1_df, 'GLOBALEVENTID')
-event_mentions_df.show(2,False)
