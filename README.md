@@ -73,4 +73,4 @@ Until the 25th of November (Data interpretation)
 ## Questions for TAs - Milestone 2
 
 - In the GCAM column, the floating point average value (the ones that start with v) do not exist for all dictionaries in that event.
-There are a lot of c's, but not a corresponding number of v's. In the documentation this fact is not explained, wanted to know if they only computed the score for specific dictionaries?
+There are a lot of c's, but not a corresponding number of v's. In the documentation this fact is not explained, wanted to know if they only computed the score for specific dictionaries? Also, where could we find some definitions of the "feeling" of the dictionaries? Some are stated in the Codebook, others have excel sheets in the web, but some don't, if you knew where the GDELT goes to obtain this information would be great.
