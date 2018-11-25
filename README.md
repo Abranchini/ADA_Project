@@ -46,7 +46,9 @@ Until the 25th of November (Data interpretation)
 
 ## A list of internal milestones (until milestone 3)
 
-- Think about different visualizations to present the conducted data analysis in a clear and concise manner. 
+- Think about different visualizations to present the conducted data analysis in a clear and concise manner.
+- Run our computations on the whole dataset.
+- Create a template for our data story a fill individual sections.
 
 
 ## Questions for TAs - Milestone 1
@@ -58,6 +60,7 @@ Until the 25th of November (Data interpretation)
 
 
 ## Questions for TAs - Milestone 2
-In the GCAM column, the floating point average value (the ones that start with v) do not exist for all dictionaries in that event.
-There are a lot of c's, but not a corresponding number of v's. In the documentation this fact is not explained, wanted to know if they only computed the score for specific dictionaries
+
+- In the GCAM column, the floating point average value (the ones that start with v) do not exist for all dictionaries in that event.
+There are a lot of c's, but not a corresponding number of v's. In the documentation this fact is not explained, wanted to know if they only computed the score for specific dictionaries?
 
