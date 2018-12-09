@@ -1,0 +1,234 @@
+﻿—,World,continent,pop_2016,pop_2017,country_trim
+1,China,Asia,"1,403,500,365","1,409,517,397",China
+2,India,Asia,"1,324,171,354","1,339,180,127",India
+3,United States,Americas,"322,179,605","324,459,463",United States
+4,Indonesia,Asia,"261,115,456","263,991,379",Indonesia
+5,Brazil,Americas,"207,652,865","209,288,278",Brazil
+6,Pakistan,Asia,"193,203,476","197,015,955",Pakistan
+7,Nigeria,Africa,"185,989,640","190,886,311",Nigeria
+8,Bangladesh,Asia,"162,951,560","164,669,751",Bangladesh
+9,Russian Federation,Europe,"146,864,513","143,989,754",Russian Federation
+10,Mexico,Americas,"127,540,423","129,163,276",Mexico
+11,Japan,Asia,"127,748,513","127,484,450",Japan
+12,Ethiopia,Africa,"102,403,196","104,957,438",Ethiopia
+13,Philippines,Asia,"103,320,222","104,918,090",Philippines
+14,Egypt,Africa,"95,688,681","97,553,151",Egypt
+15,Vietnam,Asia,"94,569,072","95,540,800",Vietnam
+16,Germany,Europe,"81,914,672","82,114,224",Germany
+17,"Congo, the Democratic Republic of the",Africa,"78,736,153","81,339,988","Congo, the Democratic Republic of the"
+18,"Iran, Islamic Republic of",Asia,"80,277,428","81,162,788","Iran, Islamic Republic of"
+19,Turkey,Asia,"79,512,426","80,745,020",Turkey
+20,Thailand,Asia,"68,863,514","69,037,513",Thailand
+21,United Kingdom,Europe,"65,788,574","66,181,585",United Kingdom
+22,France,Europe,"64,720,690","64,979,548",France
+23,Italy,Europe,"59,429,938","59,359,900",Italy
+24,"Tanzania, United Republic of",Africa,"55,572,201","57,310,019","Tanzania, United Republic of"
+25,South Africa,Africa,"56,015,473","56,717,156",South Africa
+26,Myanmar,Asia,"52,885,223","53,370,609",Myanmar
+27,"Korea, Republic of",Asia,"50,791,919","50,982,212","Korea, Republic of"
+28,Colombia,Americas,"48,653,419","49,065,615",Colombia
+29,Kenya,Africa,"48,461,567","49,699,862",Kenya
+30,Spain,Europe,"46,347,576","46,354,321",Spain
+31,Argentina,Americas,"43,847,430","44,271,041",Argentina
+32,Ukraine,Europe,"44,438,625","44,222,947",Ukraine
+33,Uganda,Africa,"41,487,965","42,862,958",Uganda
+34,Algeria,Africa,"40,606,052","41,318,142",Algeria
+35,Sudan,Africa,"39,578,828","40,533,330",Sudan
+36,Iraq,Asia,"37,202,572","38,274,618",Iraq
+37,Poland,Europe,"38,224,410","38,170,712",Poland
+38,Canada,Americas,"36,289,822","36,624,199",Canada
+39,Morocco,Africa,"35,276,786","35,739,580",Morocco
+40,Afghanistan,Asia,"34,656,032","35,530,081",Afghanistan
+41,Saudi Arabia,Asia,"32,275,687","32,938,213",Saudi Arabia
+42,Peru,Americas,"31,773,839","32,165,485",Peru
+43,"Venezuela, Bolivarian Republic of",Americas,"31,568,179","31,977,065","Venezuela, Bolivarian Republic of"
+44,Uzbekistan,Asia,"31,446,795","31,910,641",Uzbekistan
+45,Malaysia,Asia,"31,187,265","31,624,264",Malaysia
+46,Angola,Africa,"28,813,463","29,784,193",Angola
+47,Mozambique,Africa,"28,829,476","29,668,834",Mozambique
+48,Nepal,Asia,"28,982,771","29,304,998",Nepal
+49,Ghana,Africa,"28,206,728","28,833,629",Ghana
+50,Yemen,Asia,"27,584,213","28,250,420",Yemen
+51,Madagascar,Africa,"24,894,551","25,570,895",Madagascar
+52,"Korea, Democratic People’s Republic of",Asia,"25,368,620","25,490,965","Korea, Democratic People’s Republic of"
+53,Australia,Oceania,"24,125,848","24,450,561",Australia
+54,Cote d’Ivoire,Africa,"23,695,919","24,294,750",Cote d’Ivoire
+55,Cameroon,Africa,"23,439,189","24,053,727",Cameroon
+56,Taiwan,Asia,"23,556,706","23,626,456",Taiwan
+57,Niger,Africa,"20,672,987","21,477,348",Niger
+58,Sri Lanka,Asia,"20,798,492","20,876,917",Sri Lanka
+59,Romania,Europe,"19,778,083","19,679,306",Romania
+60,Burkina Faso,Africa,"18,646,433","19,193,382",Burkina Faso
+61,Malawi,Africa,"18,091,575","18,622,104",Malawi
+62,Mali,Africa,"17,994,837","18,541,980",Mali
+63,Syrian Arab Republic,Asia,"18,430,453","18,269,868",Syrian Arab Republic
+64,Kazakhstan,Asia,"17,987,736","18,204,499",Kazakhstan
+65,Chile,Americas,"17,909,754","18,054,726",Chile
+66,Zambia,Africa,"16,591,390","17,094,130",Zambia
+67,Netherlands,Europe,"16,987,330","17,035,938",Netherlands
+68,Guatemala,Americas,"16,582,469","16,913,503",Guatemala
+69,Ecuador,Americas,"16,385,068","16,624,858",Ecuador
+70,Zimbabwe,Africa,"16,150,362","16,529,904",Zimbabwe
+71,Cambodia,Asia,"15,762,370","16,005,373",Cambodia
+72,Senegal,Africa,"15,411,614","15,850,567",Senegal
+73,Chad,Africa,"14,452,543","14,899,994",Chad
+74,Somalia,Africa,"14,317,996","14,742,523",Somalia
+75,Guinea,Africa,"12,395,924","12,717,176",Guinea
+76,South Sudan,Africa,"12,230,730","12,575,714",South Sudan
+77,Rwanda,Africa,"11,917,508","12,208,407",Rwanda
+78,Tunisia,Africa,"11,403,248","11,532,127",Tunisia
+79,Cuba,Americas,"11,475,982","11,484,636",Cuba
+80,Belgium,Europe,"11,358,379","11,429,336",Belgium
+81,Benin,Africa,"10,872,298","11,175,692",Benin
+82,Greece,Europe,"11,183,716","11,159,773",Greece
+83,"Bolivia, Plurinational State Of",Americas,"10,887,882","11,051,600","Bolivia, Plurinational State Of"
+84,Haiti,Americas,"10,847,334","10,981,229",Haiti
+85,Burundi,Africa,"10,524,117","10,864,245",Burundi
+86,Dominican Republic,Americas,"10,648,791","10,766,998",Dominican Republic
+87,Czechia,Europe,"10,610,947","10,618,303",Czechia
+88,Portugal,Europe,"10,371,627","10,329,506",Portugal
+89,Sweden,Europe,"9,837,533","9,910,701",Sweden
+90,Azerbaijan,Asia,"9,725,376","9,827,589",Azerbaijan
+91,Hungary,Europe,"9,753,281","9,721,559",Hungary
+92,Jordan,Asia,"9,455,802","9,702,353",Jordan
+93,Belarus,Europe,"9,480,042","9,468,338",Belarus
+94,United Arab Emirates,Asia,"9,269,612","9,400,145",United Arab Emirates
+95,Honduras,Americas,"9,112,867","9,265,067",Honduras
+96,Tajikistan,Asia,"8,734,951","8,921,343",Tajikistan
+97,Serbia,Europe,"8,820,083","8,790,574",Serbia
+98,Austria,Europe,"8,712,137","8,735,453",Austria
+99,Switzerland,Europe,"8,401,739","8,476,005",Switzerland
+100,Israel,Asia,"8,191,828","8,321,570",Israel
+101,Papua New Guinea,Oceania,"8,084,991","8,251,162",Papua New Guinea
+102,Togo,Africa,"7,606,374","7,797,694",Togo
+103,Sierra Leone,Africa,"7,396,190","7,557,212",Sierra Leone
+104,Hong Kong,Asia,"7,302,843","7,364,883",Hong Kong
+105,Bulgaria,Europe,"7,131,494","7,084,571",Bulgaria
+106,Lao People’s Democratic Republic,Asia,"6,758,353","6,858,160",Lao People’s Democratic Republic
+107,Paraguay,Americas,"6,725,308","6,811,297",Paraguay
+108,El Salvador,Americas,"6,344,722","6,377,853",El Salvador
+109,Libya,Africa,"6,293,253","6,374,616",Libya
+110,Nicaragua,Americas,"6,149,928","6,217,581",Nicaragua
+111,Lebanon,Asia,"6,006,668","6,082,357",Lebanon
+112,Kyrgyzstan,Asia,"5,955,734","6,045,117",Kyrgyzstan
+113,Turkmenistan,Asia,"5,662,544","5,758,075",Turkmenistan
+114,Denmark,Europe,"5,711,870","5,733,551",Denmark
+115,Singapore,Asia,"5,622,455","5,708,844",Singapore
+116,Finland,Europe,"5,503,132","5,523,231",Finland
+117,Slovakia,Europe,"5,444,218","5,447,662",Slovakia
+118,Norway,Europe,"5,254,694","5,305,383",Norway
+119,Congo,Africa,"5,125,821","5,260,750",Congo
+120,Eritrea,Africa,"4,954,645","5,068,831",Eritrea
+121,"Palestine, State of",Asia,"4,790,705","4,920,724","Palestine, State of"
+122,Costa Rica,Americas,"4,857,274","4,905,769",Costa Rica
+123,Ireland,Europe,"4,726,078","4,761,657",Ireland
+124,Liberia,Africa,"4,613,823","4,731,906",Liberia
+125,New Zealand,Oceania,"4,660,833","4,705,818",New Zealand
+126,Central African Republic,Africa,"4,594,621","4,659,080",Central African Republic
+127,Oman,Asia,"4,424,762","4,636,262",Oman
+128,Mauritania,Africa,"4,301,018","4,420,184",Mauritania
+129,Croatia,Europe,"4,213,265","4,189,353",Croatia
+130,Kuwait,Asia,"4,052,584","4,136,528",Kuwait
+131,Panama,Americas,"4,034,119","4,098,587",Panama
+132,"Moldova, Republic of",Europe,"4,059,608","4,051,212","Moldova, Republic of"
+133,Georgia,Asia,"3,925,405","3,912,061",Georgia
+134,Puerto Rico,Americas,"3,667,903","3,663,131",Puerto Rico
+135,Bosnia and Herzegovina,Europe,"3,516,816","3,507,017",Bosnia and Herzegovina
+136,Uruguay,Americas,"3,444,006","3,456,750",Uruguay
+137,Mongolia,Asia,"3,027,398","3,075,647",Mongolia
+138,Armenia,Asia,"2,924,816","2,930,450",Armenia
+139,Albania,Europe,"2,926,348","2,930,187",Albania
+140,Jamaica,Americas,"2,881,355","2,890,299",Jamaica
+141,Lithuania,Europe,"2,908,249","2,890,297",Lithuania
+142,Qatar,Asia,"2,569,804","2,639,211",Qatar
+143,Namibia,Africa,"2,479,713","2,533,794",Namibia
+144,Botswana,Africa,"2,250,260","2,291,661",Botswana
+145,Lesotho,Africa,"2,203,821","2,233,339",Lesotho
+146,Gambia,Africa,"2,038,501","2,100,568",Gambia
+147,"Macedonia, the former Yugoslav Republic of",Europe,"2,081,206","2,083,160","Macedonia, the former Yugoslav Republic of"
+148,Slovenia,Europe,"2,077,862","2,079,976",Slovenia
+149,Gabon,Africa,"1,979,786","2,025,137",Gabon
+150,Latvia,Europe,"1,970,530","1,949,670",Latvia
+151,Guinea-Bissau,Africa,"1,815,698","1,861,283",Guinea-Bissau
+152,Bahrain,Asia,"1,425,171","1,492,584",Bahrain
+153,Trinidad and Tobago,Americas,"1,364,962","1,369,125",Trinidad and Tobago
+154,Swaziland,Africa,"1,343,098","1,367,254",Swaziland
+155,Estonia,Europe,"1,312,442","1,309,632",Estonia
+156,East Timor,Asia,"1,268,671","1,296,311",East Timor
+157,Equatorial Guinea,Africa,"1,221,490","1,267,689",Equatorial Guinea
+158,Mauritius,Africa,"1,262,132","1,265,138",Mauritius
+159,Cyprus,Asia,"1,170,125","1,179,551",Cyprus
+160,Djibouti,Africa,"942,333","956,985",Djibouti
+161,Fiji,Oceania,"898,760","905,502",Fiji
+162,Reunion,Africa,"869,925","876,562",Reunion
+163,Comoros,Africa,"795,601","813,912",Comoros
+164,Bhutan,Asia,"797,765","807,610",Bhutan
+165,Guyana,Americas,"773,303","777,859",Guyana
+166,Montenegro,Europe,"628,615","628,960",Montenegro
+167,Macau,Asia,"612,167","622,567",Macau
+168,Solomon Islands,Oceania,"599,419","611,343",Solomon Islands
+169,Luxembourg,Europe,"575,747","583,455",Luxembourg
+170,Suriname,Americas,"558,368","563,402",Suriname
+171,Western Sahara,Africa,"538,755","552,628",Western Sahara
+172,Cape Verde,Africa,"539,560","546,388",Cape Verde
+173,Guadeloupe,Americas,"449,975","449,568",Guadeloupe
+174,Maldives,Asia,"427,756","436,330",Maldives
+175,Malta,Europe,"429,362","430,835",Malta
+176,Brunei Darussalam,Asia,"423,196","428,697",Brunei Darussalam
+177,Bahamas,Americas,"391,232","395,361",Bahamas
+178,Martinique,Americas,"385,103","384,896",Martinique
+179,Belize,Americas,"366,954","374,681",Belize
+180,Iceland,Europe,"332,474","335,025",Iceland
+181,Barbados,Americas,"284,996","285,719",Barbados
+182,French Polynesia,Oceania,"280,208","283,007",French Polynesia
+183,French Guiana,Americas,"275,713","282,731",French Guiana
+184,New Caledonia,Oceania,"272,677","276,255",New Caledonia
+185,Vanuatu,Oceania,"270,402","276,244",Vanuatu
+186,Mayotte,Africa,"246,489","253,045",Mayotte
+187,Sao Tome and Principe,Africa,"199,910","204,327",Sao Tome and Principe
+188,Samoa,Oceania,"195,125","196,440",Samoa
+189,Saint Lucia,Americas,"178,015","178,844",Saint Lucia
+190,Guernsey,Europe,"164,541","165,314",Guernsey
+191,Guam,Oceania,"162,896","164,229",Guam
+192,Curaçao,Americas,"159,371","160,539",Curaçao
+193,Kiribati,Oceania,"114,395","116,398",Kiribati
+194,Saint Vincent and the Grenadines,Americas,"109,643","109,897",Saint Vincent and the Grenadines
+195,Tonga,Oceania,"107,122","108,020",Tonga
+196,Grenada,Americas,"107,317","107,825",Grenada
+197,"Micronesia, Federated States of",Oceania,"104,937","105,544","Micronesia, Federated States of"
+198,Aruba,Americas,"104,822","105,264",Aruba
+199,"Virgin Islands, British",Americas,"104,913","104,901","Virgin Islands, British"
+200,Antigua and Barbuda,Americas,"100,963","102,012",Antigua and Barbuda
+201,Seychelles,Africa,"94,228","94,737",Seychelles
+202,Isle of Man,Europe,"83,737","84,287",Isle of Man
+203,Andorra,Europe,"77,281","76,965",Andorra
+204,Dominica,Americas,"73,543","73,925",Dominica
+205,Cayman Islands,Americas,"60,765","61,559",Cayman Islands
+206,Bermuda,Americas,"61,666","61,349",Bermuda
+207,Greenland,Americas,"56,412","56,480",Greenland
+208,American Samoa,Oceania,"55,599","55,641",American Samoa
+209,Saint Kitts and Nevis,Americas,"54,821","55,345",Saint Kitts and Nevis
+210,Northern Mariana Islands,Oceania,"55,023","55,144",Northern Mariana Islands
+211,Marshall Islands,Oceania,"53,066","53,127",Marshall Islands
+212,Faroe Islands,Europe,"49,117","49,290",Faroe Islands
+213,Sint Maarten,Americas,"39,537","40,120",Sint Maarten
+214,Monaco,Europe,"38,499","38,695",Monaco
+215,Liechtenstein,Europe,"37,666","37,922",Liechtenstein
+216,Turks and Caicos Islands,Americas,"34,900","35,446",Turks and Caicos Islands
+217,Gibraltar,Europe,"34,408","34,571",Gibraltar
+218,San Marino,Europe,"33,203","33,400",San Marino
+219,British Virgin Islands,Americas,"30,661","31,196",British Virgin Islands
+220,Caribbean Netherlands,Americas,"25,019","25,398",Caribbean Netherlands
+221,Palau,Oceania,"21,503","21,729",Palau
+222,Cook Islands,Oceania,"17,379","17,380",Cook Islands
+223,Anguilla,Americas,"14,764","14,909",Anguilla
+224,Wallis and Futuna,Oceania,"11,899","11,773",Wallis and Futuna
+225,Nauru,Oceania,"11,347","11,359",Nauru
+226,Tuvalu,Oceania,"11,097","11,192",Tuvalu
+227,Saint Pierre and Miquelon,Americas,"6,305","6,320",Saint Pierre and Miquelon
+228,Montserrat,Americas,"5,152","5,177",Montserrat
+229,"Saint Helena, Ascension and Tristan da Cunha",Africa,"4,035","4,049","Saint Helena, Ascension and Tristan da Cunha"
+230,Falkland Islands (Malvinas),Americas,"2,910","2,910",Falkland Islands (Malvinas)
+231,Niue,Oceania,"1,624","1,618",Niue
+232,Tokelau,Oceania,"1,282","1,300",Tokelau
+233,Holy See,Europe,801,792,Holy See
