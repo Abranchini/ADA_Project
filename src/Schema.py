@@ -33,7 +33,7 @@ GKG_SCHEMA = StructType([
 
 EVENTS_SCHEMA = StructType([
     StructField("GLOBALEVENTID",LongType(),True),
-    StructField("Day_DATE",StringType(),True),
+    StructField("Day_DATE",LongType(),True),
     StructField("MonthYear_Date",StringType(),True),
     StructField("Year_Date",StringType(),True),
     StructField("FractionDate",FloatType(),True),
