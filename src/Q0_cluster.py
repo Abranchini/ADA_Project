@@ -134,16 +134,18 @@ mentions_df = spark.read.option("sep", "\t").csv(os.path.join(DATA_DIR, "*.menti
 
 ############################### Question 0 ##############################################
 ###### get the number of events grouped by the country they occurred
-events_1 = events_df.select('ActionGeo_CountryCode').filter(events_df.ActionGeo_CountryCode.isNotNull())
-CountryEvent_number = events_1.groupBy('ActionGeo_CountryCode').count()
 
-CountryEvent_number.write.mode("overwrite").parquet('/tmp/msadler/CountryEvent_number')
+# the following is hashed because it has been completed
+#events_1 = events_df.select('ActionGeo_CountryCode').filter(events_df.ActionGeo_CountryCode.isNotNull())
+#CountryEvent_number = events_1.groupBy('ActionGeo_CountryCode').count()
+
+#CountryEvent_number.write.mode("overwrite").parquet('/tmp/msadler/CountryEvent_number')
 
 
 ###### get the number of events grouped by the country reporting
 
 # url to country dataset
-Domains = spark.read.format("csv").option("header", "true").load(DATA_LOCAL + "urls.csv")
+Domains = spark.read.format("csv").option("header", "true").load("urls.csv")
 Domains = Domains.select(Domains['alpha-2'].alias('code') ,Domains['name'].alias('country_source'), 'region', Domains['web'].alias('url'))
 
 

@@ -9,6 +9,10 @@ from pyspark.sql.types import FloatType
 spark = SparkSession.builder.getOrCreate()
 
 
-Domains = spark.read.format("csv").option("header", "true").load("hdfs://urls.csv")
-Domains = Domains.select(Domains['alpha-2'].alias('code') ,Domains['name'].alias('country_source'), 'region', Domains['web'].alias('url'))
-Domains.show()
+
+#DATA_LOCAL = 'hdfs:///home/msadler'
+Domains = spark.read.format("csv").option("header", "true").load("urls.csv")
+
+##Domains = spark.read.option("sep", "\t").csv(os.path.join(DATA_LOCAL, "urls.csv"),schema=URL_SCHEMA)
+#Domains = Domains.select(Domains['alpha-2'].alias('code'), Domains['name'].alias('country_source'), 'region', Domains['web'].alias('url'))
+#Domains.show()
