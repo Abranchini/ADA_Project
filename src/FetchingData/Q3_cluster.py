@@ -3,13 +3,10 @@ import os
 import scipy as sp
 from pyspark.sql import *
 from pyspark.sql.types import *
-from pyspark.sql.functions import to_timestamp,desc, col, count, sum, asc, coalesce, udf, when, window, explode, unix_timestamp, lit
+from pyspark.sql.functions import to_timestamp,desc, col, split, count, array, concat_ws, sum, min, max, asc, coalesce, udf, when, window, explode, unix_timestamp, lit
 from pyspark.sql.types import FloatType
 
 spark = SparkSession.builder.getOrCreate()
-
-
-##### TYPES HAVE CHANGED FOR NumArticles, NumMentions & NumSources
 
 GKG_SCHEMA = StructType([
         StructField("GKGRECORDID",StringType(),True),
@@ -43,7 +40,7 @@ GKG_SCHEMA = StructType([
 
 EVENTS_SCHEMA = StructType([
     StructField("GLOBALEVENTID",LongType(),True),
-    StructField("Day_DATE",StringType(),True),
+    StructField("Day_DATE",LongType(),True),
     StructField("MonthYear_Date",StringType(),True),
     StructField("Year_Date",StringType(),True),
     StructField("FractionDate",FloatType(),True),
@@ -124,88 +121,29 @@ MENTIONS_SCHEMA = StructType([
     StructField("Extras",StringType(),True)
     ])
 
-
-# cluster directory
 DATA_DIR = 'hdfs:///datasets/gdeltv2'
-DATA_LOCAL =
 
-# open all the datasets
+# open GDELT data
 gkg_df = spark.read.option("sep", "\t").csv(os.path.join(DATA_DIR, "*.gkg.csv"),schema=GKG_SCHEMA)
 events_df = spark.read.option("sep", "\t").csv(os.path.join(DATA_DIR, "*.export.CSV"),schema=EVENTS_SCHEMA)
 mentions_df = spark.read.option("sep", "\t").csv(os.path.join(DATA_DIR, "*.mentions.CSV"),schema=MENTIONS_SCHEMA)
 
-#### open helper sets
-
-# url to country dataset
-Domains_txt = sc.textFile(DATA_LOCAL + 'GdeltDomainsByCountry-May18.txt')
-Domains_rdd = Domains_txt.map(lambda x: x.split("\t"))
-Domains = Domains_rdd.toDF(['url', 'code', 'country_source'])
-
-############################### Question 1 ##############################################
-
-# select the required data from Mentions Dataset
-mentions_1 = mentions_df.select("GLOBALEVENTID", "EventTimeDate", "MentionType", "MentionSourceName") \
-                .filter(mentions_df["MentionType"] == '1')
-
-# join the domain df with the country corresponding to the source
-mentions_2 = mentions_1.join(Domains, Domains['url'] == mentions_1['MentionSourceName'], "left_outer")
-
-# filter out urls that are unknown
-mentions_3 = mentions_2.filter(mentions_2.country_source.isNotNull())
-
-# print the number of urls that have no country
-print('number of unknown urls: ', mentions_2.filter("url is null").select('MentionSourceName').distinct().count())
-print('number of known urls: ', mentions_3.select('url').distinct().count())
-
-# join the file with the countries and capitals
-mentions_4 = mentions_3.join(CountryToCapital, CountryToCapital['CountryName'] == mentions_3['country_source'], "left_outer")
-print('Total number of articles with a country assigned: ', mentions_4.count())
-print('Total number of articles with no country assigned: ', mentions_4.filter("CapitalLatitude is null").count())
-
-# filter out rows with no geographic coordinates
-mentions_5 = mentions_4.filter(mentions_4.CapitalLatitude.isNotNull())
-
-# select relevant columns
-mentions_6 = mentions_5.select('GLOBALEVENTID', 'EventTimeDate','CountryCode', 'CountryName', mentions_5['CapitalLatitude'].alias('Source_Lat'),
-                                                   mentions_5['CapitalLongitude'].alias('Source_Long'))
-mentions_6 = mentions_6.withColumn("Source_Lat", mentions_6["Source_Lat"].cast("float"))
-mentions_6 = mentions_6.withColumn("Source_Long", mentions_6["Source_Long"].cast("float"))
-
-# select Data from Events Dataset
-events_1= events_df.select("GLOBALEVENTID", 'ActionGeo_CountryCode',"ActionGeo_Lat", "ActionGeo_Long", "NumMentions","NumSources","NumArticles","AvgTone")
-
-# filter out events that have no geographic coordinates
-print('Total number of events: ', events_1.count())
-events_2 = events_1.filter(events_1.ActionGeo_Lat.isNotNull())
-print('Number of events with geographic coordinates: ', events_2.count())
-
-# merge the clean events and mentions dfs
-data_q1 = events_2.join(mentions_6, 'GLOBALEVENTID')
-
-# save the result
-
-data_q1.write.parquet(DATA_LOCAL + 'data_q1.parquet')
-
-############################### Question 2 ##############################################
-
-data_q2 = events_2.groupBy('ActionGeo_CountryCode').agg(sum('NumArticles').alias('sum_articles'), count('GLOBALEVENTID').alias('count_events'))
-data_q2.write.parquet(DATA_LOCAL + 'data_q2.parquet')
-
-############################### Question 3 ##############################################
+Domains = spark.read.format("csv").option("header", "true").load("urls.csv")
+Domains = Domains.select(Domains['alpha-2'].alias('code') ,Domains['name'].alias('country_source'), 'region', Domains['web'].alias('url'))
 
 # dataset with the human development index
-HDI_df = spark.read.format("csv").option("header", "true").load(DATA_LOCAL + "HDI_categories.csv")
+HDI_df = spark.read.format("csv").option("header", "true").load("HDI_code_df.csv")
 
 #### create dataframe with country and country code from the domains dataframe
-countrytocode = Domains.drop_duplicates(subset = ['code'])
+#countrytocode = Domains.drop_duplicates(subset = ['code'])
 # join country code
-HDI_CountryCode = HDI_df.join(countrytocode.select('code', 'country_source'), countrytocode['country_source'] == HDI_df['Country'])
+#HDI_CountryCode = HDI_df.join(countrytocode.select('code', 'country_source'), countrytocode['country_source'] == HDI_df['Country'])
 
 ##### prepare the gkg file with the information needed
 
 # filter on events that have count information
 gkg_1 = gkg_df.filter(gkg_df.Counts.isNotNull())
-CountType = pyspark.sql.functions.split(gkg_1['Counts'], '#')
+CountType = split(gkg_1['Counts'], '#')
 
 # add the event type
 gkg_2 = gkg_1.withColumn('EventType', CountType.getItem(0))
@@ -215,7 +153,7 @@ gkg_3 = gkg_2.withColumn('NumPeople', CountType.getItem(1))
 
 ###### prepare mention file
 mentions_1 = mentions_df.select("GLOBALEVENTID", "MentionType", "MentionSourceName", 'MentionIdentifier') \
-                .filter(mentions_df["MentionType"] == '1')
+                        .filter(mentions_df["MentionType"] == '1')
 
 # join the dataframe url to country
 mentions_2 = mentions_1.join(Domains, Domains['url'] == mentions_1['MentionSourceName'], "left_outer")
@@ -224,7 +162,7 @@ mentions_2 = mentions_1.join(Domains, Domains['url'] == mentions_1['MentionSourc
 mentions_3 = mentions_2.filter(mentions_2.country_source.isNotNull())
 
 ##### prepare event file
-events_1= events_df.select("GLOBALEVENTID", 'Actor1Religion1Code', 'Actor2Religion1Code',
+events_1= events_df.select("GLOBALEVENTID", 'Day_DATE','Actor1Religion1Code', 'Actor2Religion1Code',
                                'NumMentions',"AvgTone", 'GoldsteinScale', 'ActionGeo_CountryCode')
 
 # filter events with no country code
@@ -239,7 +177,7 @@ events_4 = events_3.filter(events_3.ActorReligion.isNotNull())
 #### join the files togther
 
 # join the HDI file to country code
-events_5 = events_4.join(HDI_CountryCode.select('code', 'HDI'), HDI_CountryCode['code']==events_4['ActionGeo_CountryCode'])
+events_5 = events_4.join(HDI_df.select('Country', 'HDI', 'FIPS_GDELT'), HDI_df['FIPS_GDELT']==events_4['ActionGeo_CountryCode'])
 
 # join event and mention file
 mention_event = events_5.join(mentions_3, 'GLOBALEVENTID')
@@ -247,10 +185,36 @@ mention_event = events_5.join(mentions_3, 'GLOBALEVENTID')
 # join mention_event and gkg
 gkg_mention_event = mention_event.join(gkg_3, mention_event['MentionIdentifier'] == gkg_3['DocumentIdentifier'])
 
-data_q3 = gkg_mention_event.select(gkg_mention_event['ActionGeo_CountryCode'].alias('CountryEvent'), 'EventType',
-                                   'ActorReligion', 'HDI', 'AvgTone',
-                                  gkg_mention_event['country_source'].alias('CountrySource'))
-data_q3 = data_q3.dropDuplicates()
+
+HRE = ['c2.152', 'c2.214', 'c3.2', 'c5.7', 'c6.5', 'c7.2', 'c10.1',
+       'c14.9', 'c15.3', 'c15.4', 'c15.12', 'c15.26', 'c15.27', 'c15.30',
+       'c15.36', 'c15.42', 'c15.53', 'c15.57', 'c15.61', 'c15.92',
+       'c15.93', 'c15.94', 'c15.97', 'c15.101', 'c15.102', 'c15.103',
+       'c15.105', 'c15.106', 'c15.107', 'c15.108', 'c15.109', 'c15.110',
+       'c15.116', 'c15.120', 'c15.123', 'c15.126', 'c15.131', 'c15.136',
+       'c15.137', 'c15.152', 'c15.171', 'c15.173', 'c15.179', 'c15.203',
+       'c15.219', 'c15.221', 'c15.239', 'c15.260', 'c21.1', 'c35.31',
+       'c24.1', 'c24.2', 'c24.3', 'c24.4', 'c24.5', 'c24.6', 'c24.7',
+       'c24.8', 'c24.9', 'c24.10', 'c24.11', 'c36.31', 'c37.31', 'c41.1']
+
+Emot_Words_df = gkg_mention_event.select(gkg_mention_event['ActionGeo_CountryCode'].alias('CountryEvent'), 'EventType',
+                                   'ActorReligion', 'HDI', 'AvgTone', 'Day_DATE',
+                                  'country_source', 'GCAM',split(col("GCAM"), ":").alias("GCAM2"))
+
+Emot_Words_df = Emot_Words_df.withColumn('GCAM2', concat_ws(',', 'GCAM2'))
+
+Emot_Words_df = Emot_Words_df.select('CountryEvent', 'EventType','ActorReligion', 'country_source', 'Day_DATE',
+                                     'HDI', 'AvgTone', split(col("GCAM2"), ",").alias("GCAM"))
+
+Emot_Words_df = Emot_Words_df.withColumn("HRE", array([lit(x) for x in HRE]) )
+
+differencer = udf(lambda x,y: list(set(y)-(set(y)-set(x))), ArrayType(StringType()))
+Emot_Words_df = Emot_Words_df.withColumn('DIF', differencer('HRE', 'GCAM'))
+
+Emot_Words_df = Emot_Words_df.select('CountryEvent', 'EventType','ActorReligion', 'country_source', 'Day_DATE',
+                                     'HDI', 'AvgTone', 'DIF')
+
+data_q3 = Emot_Words_df.dropDuplicates()
 
 ##### generate and save feature counts
 
@@ -261,14 +225,15 @@ data_q3_EventType = data_q3.groupBy("EventType").count()
 # HDI
 data_q3_HDI = data_q3.groupBy("HDI").count()
 # CountryEvent
-data_q3_CountryEvent = data_q3.groupBy("CountryEvent").count()
+#data_q3_CountryEvent = data_q3.groupBy("CountryEvent").count()
 # CountrySource
-data_q3_CountrySource = data_q3.groupBy("CountrySource").count()
+#data_q3_CountrySource = data_q3.groupBy("CountrySource").count()
 
 # save everything
-data_q3.write.parquet(DATA_LOCAL + 'data_q3.parquet')
-data_q3_ActorReligion.write.parquet(DATA_LOCAL + 'data_q3_ActorReligion.parquet')
-data_q3_EventType.write.parquet(DATA_LOCAL + 'data_q3_EventType.parquet')
-data_q3_HDI.write.parquet(DATA_LOCAL + 'data_q3_HDI.parquet')
-data_q3_CountryEvent.write.parquet(DATA_LOCAL + 'data_q3_CountryEvent.parquet')
-data_q3_CountrySource.write.parquet(DATA_LOCAL + 'data_q3_CountrySource.parquet')
+
+data_q3.write.mode("overwrite").parquet('/tmp/msadler/data_q3.parquet')
+data_q3_ActorReligion.write.mode("overwrite").json('/tmp/msadler/data_q3_ActorReligion.json')
+data_q3_EventType.write.mode("overwrite").json('/tmp/msadler/data_q3_EventType.json')
+data_q3_HDI.write.mode("overwrite").json('/tmp/msadler/data_q3_HDI.json')
+#data_q3_CountryEvent.write.mode("overwrite").parquet('/tmp/msadler/data_q3_CountryEvent.parquet')
+#data_q3_CountrySource.write.mode("overwrite").parquet('/tmp/msadler/data_q3_CountrySource.parquet')
