@@ -68,7 +68,7 @@ Until the 25th of November (Data interpretation)
 ---
 
 ## Tasks allocation <br>
-Marie: preliminary data analysis, fetching the data in the cluster, emotional model development, correlations between emotions and distance/number of articles, plotting graphs <br>
+Marie: fetching the data in the cluster, emotional model development, dependencies between emotions and distance/number of articles, plotting graphs <br>
 Pedro: fetching the data in the cluster, analysis of key words & dictionary analysis, emotions analysis & saturation limit, plotting graphs and graph animations <br>
 Matyas: countries data processing, plotting maps, data story website <br>
 
