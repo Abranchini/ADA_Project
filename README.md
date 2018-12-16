@@ -65,6 +65,13 @@ Until the 25th of November (Data interpretation)
 
 ---
 
+## Tasks allocation
+Marie: preliminary data analysis, model development, plotting graphs
+Pedro: analysis of key words, emotions analysis, animations
+Matyas: countries data processing, plotting maps, data story website
+
+---
+
 
 ## Questions for TAs - Milestone 1
 
