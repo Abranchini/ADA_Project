@@ -127,6 +127,7 @@ MENTIONS_SCHEMA = StructType([
 # cluster directory
 DATA_DIR = 'hdfs:///datasets/gdeltv2'
 DATA_LOCAL = ''
+DATA_STORAGE = ''
 
 # open all the datasets
 #gkg_df = spark.read.option("sep", "\t").csv(os.path.join(DATA_DIR, "*.gkg.csv"),schema=GKG_SCHEMA)
@@ -141,4 +142,4 @@ events_2 = events_1.filter(events_1.ActionGeo_Lat.isNotNull())
 
 # aggregation and saving
 data_q2 = events_2.groupBy('ActionGeo_CountryCode').agg(sum('NumArticles').alias('sum_articles'), count('GLOBALEVENTID').alias('count_events'))
-data_q2.write.mode("overwrite").parquet('/tmp/msadler/data_q2.parquet')
+data_q2.write.mode("overwrite").parquet(DATA_STORAGE + 'data_q2.parquet')
